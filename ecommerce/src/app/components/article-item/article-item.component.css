@@ -1,0 +1,27 @@
+.article-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.on-sale {
+  background-color: #e0ffe0;
+}
+
+.not-on-sale {
+  background-color: #ffe0e0;
+}
+
+button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+}
