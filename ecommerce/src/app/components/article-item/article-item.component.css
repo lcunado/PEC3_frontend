@@ -6,13 +6,6 @@
   text-align: center;
 }
 
-img {
-  max-width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 .on-sale {
   background-color: #e0ffe0;
 }
@@ -28,4 +21,13 @@ button {
 
 .price-disabled {
   color: gray;
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
