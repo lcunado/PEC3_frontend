@@ -1,1 +1,59 @@
-<p>article-new-reactive works!</p>
+<h2>Nuevo artículo (Formulario reactivo)</h2>
+
+<form [formGroup]="article" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <input
+      id="name"
+      type="text"
+      class="form-control"
+      formControlName="name"
+      placeholder="Nombre"
+    />
+    <div *ngIf="(submitted || article.get('name')?.touched) && article.get('name')?.invalid" class="text-danger">
+        <span *ngIf="article.get('name')?.errors?.['required']">El nombre es obligatorio.</span>
+        <span *ngIf="article.get('name')?.errors?.['minlength']">Debe tener al menos 3 caracteres.</span>
+        <span *ngIf="article.get('name')?.errors?.['forbiddenName']">Este nombre no está permitido.</span>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input
+      id="price"
+      type="number"
+      class="form-control"
+      formControlName="price"
+      placeholder="Precio (€)"
+    />
+    <div *ngIf="(submitted || article.get('price')?.touched) && article.get('price')?.invalid" class="text-danger">
+        <span *ngIf="article.get('price')?.errors?.['required']">El precio es obligatorio.</span>
+        <span *ngIf="article.get('price')?.errors?.['pattern']">Debe ser un número válido.</span>
+        <span *ngIf="article.get('price')?.errors?.['min']">El precio debe ser mayor que 0.</span>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input
+      id="imageUrl"
+      type="url"
+      class="form-control"
+      formControlName="imageUrl"
+      placeholder="URL de la imagen"
+    />
+    <div *ngIf="(submitted || article.get('imageUrl')?.touched) && article.get('imageUrl')?.invalid" class="text-danger">
+        <span *ngIf="article.get('imageUrl')?.errors?.['required']">La URL es obligatoria.</span>
+        <span *ngIf="article.get('imageUrl')?.errors?.['pattern']">Debe ser una URL válida.</span>
+    </div>
+  </div>
+
+  <div class="form-check mb-3">
+    <input
+      id="isOnSale"
+      type="checkbox"
+      class="form-check-input"
+      formControlName="isOnSale"
+    />
+    <label for="isOnSale" class="form-check-label">¿Está en oferta?</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Crear artículo</button>
+</form>

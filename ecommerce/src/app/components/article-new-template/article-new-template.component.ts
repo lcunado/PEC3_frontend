@@ -32,7 +32,7 @@ export class ArticleNewTemplateComponent {
   onSubmit() {
     this.submitted = true;
     if (this.article.valid) {
-      console.log('Artículo creado:', this.article.value);
+      console.log('Artículo creado (template):', this.article.value);
       this.article.reset({ price: '', isOnSale: false });
       this.submitted = false;
     }
