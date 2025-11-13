@@ -1,5 +1,6 @@
+<app-navbar (viewChange)="changeView($event)"></app-navbar>
 <main>
-  <div class="article-list">
+  <div *ngIf="currentView === 'list'" class="article-list">
     <app-article-list></app-article-list>
   </div>
 </main>
