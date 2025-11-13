@@ -1,8 +1,33 @@
 .article-card {
+  width: 200px;
   border: 1px solid #ccc;
+  border-radius: 8px;
   padding: 1rem;
   margin: 1rem;
-  border-radius: 8px;
+  text-align: center;
+}
+
+.article-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.quantity {
+  margin: 0;
+  font-weight: bold;
+  min-width: 2rem;
   text-align: center;
 }
 

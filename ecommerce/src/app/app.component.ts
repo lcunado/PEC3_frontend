@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ArticleListComponent } from './components/article-list/article-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ArticleNewTemplateComponent } from './components/article-new-template/article-new-template.component';
+import { ArticleNewReactiveComponent } from './components/article-new-reactive/article-new-reactive.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CommonModule,
     RouterOutlet, 
     NavbarComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    ArticleNewTemplateComponent,
+    ArticleNewReactiveComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

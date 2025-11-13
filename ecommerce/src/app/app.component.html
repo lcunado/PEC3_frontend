@@ -1,8 +1,15 @@
 <app-navbar (viewChange)="changeView($event)"></app-navbar>
-<main>
+<main class="container mt-4">
   <div *ngIf="currentView === 'list'" class="article-list">
     <app-article-list></app-article-list>
   </div>
+
+  <div *ngIf="currentView === 'template'">
+    <p>Nuevo artículo template</p>
+  </div>
+
+  <div *ngIf="currentView === 'reactive'">
+    <p>Nuevo artículo reactivo</p>
+  </div>
 </main>
 
-<router-outlet />
